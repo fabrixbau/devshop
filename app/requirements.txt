@@ -4,3 +4,4 @@ django-admin-tailwind
 django-paypal
 python-decouple
 gunicorn
+python-decouple==3.6
