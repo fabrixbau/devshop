@@ -1,0 +1,1 @@
+This project is an e-commerce platform built with Python and Django. You must log in and provide your shipping details. Payments are made via PayPal, and it features an email dispatch service to send order confirmations. This service is provided by "Mailtrap," an API that simulates email sending.

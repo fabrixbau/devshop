@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Detalles del Pedido {{ pedido.id }}</h2>
+<ul>
+  <li>Cliente: {{ pedido.cliente.usuario.username }}</li>
+  <li>Fecha: {{ pedido.fecha_registro }}</li>
+  <li>Total: {{ pedido.monto_total }}</li>
+</ul>
+<h3>Productos</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for detalle in detalles %}
+    <tr>
+      <td>{{ detalle.producto.nombre }}</td>
+      <td>{{ detalle.cantidad }}</td>
+      <td>{{ detalle.subtotal }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
