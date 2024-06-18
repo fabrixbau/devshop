@@ -4,7 +4,7 @@ services:
   web:
     container_name: developershop.web
     build: ./app
-    command: gunicorn edshop.wsgi:application --bind 0.0.0.0:3762
+    command: gunicorn developershop.wsgi:application --bind 0.0.0.0:3762
     volumes:
       - ./app:/usr/src/app/
       - ./app/static:/usr/src/app/static
