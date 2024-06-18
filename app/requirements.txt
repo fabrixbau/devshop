@@ -2,6 +2,8 @@ django==3.2
 Pillow
 django-admin-tailwind
 django-paypal
-python-decouple
-gunicorn
 python-decouple==3.6
+gunicorn
+mysqlclient
+setuptools
+paypalrestsdk

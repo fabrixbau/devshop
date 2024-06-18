@@ -4,13 +4,13 @@ services:
   web:
     container_name: developershop.web
     build: ./app
-    command: gunicorn developershop.wsgi:application --bind 0.0.0.0:3762
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./app:/usr/src/app/
       - ./app/static:/usr/src/app/static
       - media_volume:/usr/src/app/media
     ports:
-      - 3762:3762
+      - 80:8000
     depends_on:
       - mysql
     env_file:
