@@ -250,7 +250,7 @@ def registrarPedido(request):
             "sexo": clienteEditar.sexo,
             "fecha_nacimiento": clienteEditar.fecha_nacimiento,
         }
-    except dataCliente.DoesNotExist:
+    except Cliente.DoesNotExist:
         dataCliente = {
             "nombre": request.user.first_name,
             "apellidos": request.user.last_name,
