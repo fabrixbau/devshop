@@ -140,3 +140,20 @@ PAYPAL_TEST = config('PAYPAL_TEST', default=True, cast=bool)
 PAYPAL_USER_EMAIL = config('PAYPAL_USER_EMAIL')
 
 ADMIN_USER_EMAIL = config('ADMIN_USER_EMAIL')
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
