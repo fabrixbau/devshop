@@ -13,6 +13,7 @@ RUN apk add --update --no-cache mariadb-connector-c-dev \
     mariadb-dev \
     gcc \
     musl-dev \
+    bash \
     && pip install mysqlclient==1.4.2.post1 \
     && apk del .build-deps \
     && apk add libffi-dev openssl-dev libgcc
@@ -29,4 +30,4 @@ COPY . .
 CMD ["gunicorn", "developershop.wsgi:application", "--bind", "0.0.0.0:8000"]
 
 # Exponer el puerto que Gunicorn usará
-EXPOSE 3762
+EXPOSE 8000
