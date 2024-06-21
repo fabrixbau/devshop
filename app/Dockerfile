@@ -28,4 +28,5 @@ COPY . .
 # Comando para ejecutar la aplicación
 CMD ["gunicorn", "developershop.wsgi:application", "--bind", "0.0.0.0:8000"]
 
-EXPOSE 8000
+# Exponer el puerto que Gunicorn usará
+EXPOSE 3762
